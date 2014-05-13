@@ -33,6 +33,17 @@ div#right_margin {
     margin: 0px 0px 0px 0px;
 }
 
+div#modal {
+    position: absolute;
+    display: none;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: +1;
+    background-color: rgba(0,0,0,0.7);
+}
+
 div#menu_container {
     position: absolute;
     top: 30%;
@@ -44,12 +55,19 @@ div#menu_container {
 
 .menu_items {
     position: relative;
-    border: 1px solid #A97171;
+    margin-bottom: 1px;
+    border: 0px solid #A97171; /* 0px on purpose */
     height: 15.5%;
     width: 98.5%;
     float: left;
+    text-align: center;
     background-color: inherit;
     cursor: pointer;
+}
+
+/* to account for a weird spacing after the first menu item */
+.menu_items:first-child {
+    margin-bottom: 0px;
 }
 
 .menu_items:hover {
@@ -60,6 +78,64 @@ div#menu_container {
 
 .menu_items:active {
     background-color: #C299AD;
+}
+
+.standardDlg {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    width: 10%;
+    height: 10%;
+    z-index: +2;
+    
+
+}
+
+div#startWorkout {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+header#startWorkout_header {
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    width: 80%;
+    height: 10%;
+    font-size: 200%;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+header#startWorkout_header > p {
+    display: inline-block;
+}
+
+button#startWorkout_close {
+    height: 50px;
+    width: 50px;
+    background-color: inherit;
+    color: white;
+    border: 3px solid white;
+    border-radius: 50%;
+    font-family: "Andale Mono";
+    font-size: 100%;
+    display: inline-block;
+    float: left;
+    margin-top: 28px;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+button#startWorkout_close:before {
+    content: "x";
+}
+button#startWorkout_close:hover {
+    border: 3px solid black;
+    color: black;    
 }
 
 table#startWorkout_table {
@@ -83,8 +159,111 @@ table#startWorkout_table td {
     padding: 5px 0px 5px 0px;
 }
 
+footer#startWorkout_footer {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    width: 80%;
+}
 
+.stwBottomButtons {
+    width: 33%;
+    height: 50px;
+    background-color: #DADAC8;
+    color: white;
+    border: none;
+    font-family: inherit;
+    font-size: 150%;
+    cursor: pointer;
+    outline: none;    
+}
 
+.stwBottomButtons:hover {
+    border: 1px solid yellow;   
+    background-color: #471919;
+    color: #DADAC8;
+}
+.stwBottomButtons:active {
+    background-color: #C299AD;
+}
+
+#stw_submit {
+
+}
+#stw_submit:before {
+    content: "submit";
+}
+
+#stw_finish {
+
+}
+#stw_finish:before {
+    content: "finish";
+}
+
+#stw_options {
+
+}
+#stw_options:before {
+    content: "options";
+}
+
+div#stopwatch {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 30%;
+    text-align: center;
+}
+
+p#stopwatch_display {
+    font-family: "Courier New";
+    font-size: 200%;
+    color: #DADAC8;
+}
+
+.stopwatchButtons {
+    width: 100%;
+    height: 20%;
+    border: none;
+    margin-bottom: 1px;
+    font-family: inherit;
+    font-size: 150%;
+    background-color: #915C5C;
+    color: black;
+    cursor: pointer;
+    outline: none;
+}
+.stopwatchButtons:hover {
+    border: 1px solid yellow;   
+    background-color: #471919;
+    color: #DADAC8;
+}
+.stopwatchButtons:active {
+    background-color: #C299AD;
+}
+
+#stopwatch_start {
+
+}
+#stopwatch_start:before {
+    content: "start";
+}
+
+#stopwatch_stop {
+
+}
+#stopwatch_stop:before {
+    content: "stop";
+}
+
+#stopwatch_reset {
+
+}
+#stopwatch_reset:before {
+    content: "reset";
+}
 
 
 
